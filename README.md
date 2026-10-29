@@ -3,8 +3,8 @@
 ![Amélie — terminal specimen over the theme wallpaper](preview.png)
 
 A theme built from the Amélie palette: onyx green field, wheat light, brass
-chrome, and the red of the café awning kept for the one thing that should be
-noticed — errors, attention marks, and the active-window border.
+chrome, and the red of the café awning. The red is kept for the one thing that
+should be noticed: errors, attention marks and the active window border.
 
 The name is the café at the corner of the rue Lepic: green room, brass fittings,
 red awning.
