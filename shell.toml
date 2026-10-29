@@ -1,0 +1,136 @@
+# Amélie: the shell surfaces.
+#
+# The bar sits a step darker than the windows so the green field reads as one
+# surface; the focus ring, the selected row and the notification border all
+# carry the vermillon-to-honey awning gradient.
+
+[bar]
+background       = "#212E20"
+background-alpha = 1.0
+text             = "#F5E1B8"
+# Attention modules: recording, voxtype, alerts, updates.
+active           = "#D64933"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border            = "rgba(d64933ee) rgba(e8b04aee) 45deg"
+active-border-foreground  = "#E8B04A"
+
+[controls]
+normal-color        = "#F5E1B8"
+normal-fill-alpha   = 0.04
+normal-border       = "#C9A13B"
+normal-border-width = 1
+normal-border-alpha = 0.35
+
+hover-cursor-color        = "#F5E1B8"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#E8B04A"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.35
+
+focus-color        = "#E8B04A"
+focus-fill-alpha   = 0.10
+focus-border       = "#E8B04A"
+focus-border-width = 1
+focus-border-alpha = 0.55
+
+selected-color        = "#F5E1B8"
+selected-fill-alpha   = 0.18
+selected-border       = "#E8B04A"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+background       = "#212E20"
+background-alpha = 0.98
+text             = "#F5E1B8"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+background       = "#182417"
+background-alpha = 0.97
+text             = "#F2D49B"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+background       = "#212E20"
+background-alpha = 1.0
+text             = "#F5E1B8"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#E8B04A"
+
+[launcher]
+background                = "#212E20"
+background-alpha          = 0.96
+text                      = "#F5E1B8"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#182417"
+scrim-alpha               = 0.55
+selected-background       = "#F5E1B8"
+selected-background-alpha = 0.08
+selected-text             = "#E8B04A"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[menu]
+background                = "#212E20"
+background-alpha          = 0.98
+text                      = "#F5E1B8"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#182417"
+scrim-alpha               = 0.55
+selected-background       = "#F5E1B8"
+selected-background-alpha = 0.08
+selected-text             = "#E8B04A"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[polkit]
+background       = "#212E20"
+background-alpha = 1.0
+text             = "#F5E1B8"
+text-error       = "#F67D72"
+border           = "hyprland.active-border"
+border-error     = "#F67D72"
+border-alpha     = 1.0
+scrim            = "#182417"
+scrim-alpha      = 0.55
+accent           = "#E8B04A"
+
+[lock]
+background       = "#182417"
+background-alpha = 0.75
+text             = "#F5E1B8"
+placeholder      = "#839D5C"
+text-error       = "#F67D72"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#F67D72"
+border-alpha     = 1.0
+selection        = "#E8B04A"
+selection-alpha  = 0.45
+
+[image-picker]
+text                    = "#F5E1B8"
+selected-border         = "#E8B04A"
+selected-border-alpha   = 1.0
+unselected-border       = "#F5E1B8"
+unselected-border-alpha = 0.28

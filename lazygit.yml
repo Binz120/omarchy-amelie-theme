@@ -1,0 +1,29 @@
+# Amélie — lazygit. Rendered from colors.toml.
+gui:
+  theme:
+    activeBorderColor:
+      - "#E8B04A"
+      - bold
+    inactiveBorderColor:
+      - "#839D5C"
+    searchingActiveBorderColor:
+      - "#E8C87E"
+      - bold
+    optionsTextColor:
+      - "#9ECBA6"
+    selectedLineBgColor:
+      - "#2E5B34"
+    inactiveViewSelectedLineBgColor:
+      - "#305134"
+    cherryPickedCommitFgColor:
+      - "#182417"
+    cherryPickedCommitBgColor:
+      - "#E8B04A"
+    markedBaseCommitFgColor:
+      - "#182417"
+    markedBaseCommitBgColor:
+      - "#E8C87E"
+    unstagedChangesColor:
+      - "#F67D72"
+    defaultFgColor:
+      - "#F5E1B8"

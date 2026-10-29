@@ -1,0 +1,63 @@
+# Amélie
+#
+# The palette is the Amélie set: a military green field, wheat light, brass
+# chrome and the red of the café awning. The 15 anchors came in as a list; eight
+# of them carry the theme directly (onyx, wheat, wheat light, military green,
+# olive, caramel, honey, saffron, ruby, vermillon, rust, black of jay) and the
+# rest are variants of those anchors in OKLCH: same hue, different lightness and
+# chroma. Reds never carry text below the error role — they are surfaces,
+# attention marks and the window border.
+#
+# Anchor map:
+#   onyx           2B3A2A  field, panels
+#   military green 2E5B34  selection, panels, sage hue
+#   olive          6E8B3D  comments, dim text, pistachio hue
+#   caramel        C9A13B  types, chrome
+#   honey          E8B04A  accent: focus, links, functions
+#   saffron        E9C46A  numbers, constants
+#   wheat          F2D49B  secondary text, keywords
+#   wheat light    F5E1B8  body text
+#   ruby           A4161A  errors, deletions (lifted to stay legible)
+#   vermillon      D64933  attention, active border
+#   rust           B23A2E  ANSI magenta
+#   black of jay   3D2B1F  warm neutrals
+
+mode = "dark"
+
+accent = "#E8B04A"                # Honey
+selection = "#2E5B34"             # Military Green
+selection_background = "#2E5B34"  # Military Green
+selection_foreground = "#F5E1B8"  # Wheat Light
+muted = "#839D5C"                 # Green Olive L 0.66
+
+background = "#2B3A2A"            # Onyx
+dark_background = "#212E20"       # Onyx L 0.285
+darker_background = "#182417"     # Onyx L 0.245
+lighter_background = "#305134"    # Military Green L 0.40
+
+foreground = "#F5E1B8"            # Wheat Light
+dark_foreground = "#76914C"       # Green Olive L 0.62
+light_foreground = "#FDEFD2"      # Wheat Light L 0.955
+bright_foreground = "#FFF9EA"     # Wheat Light L 0.985: cursor
+
+hyprland_active_border = "rgba(d64933ee) rgba(e8b04aee) 45deg"
+hyprland_inactive_border = "rgba(2e5b34aa)"
+
+# ANSI slots double as the code roles the templates render.
+red = "#F67D72"                   # Red Ruby L 0.725: errors, deletions
+yellow = "#E8C87E"                # Caramel L 0.845: types, warnings
+orange = "#E9C46A"                # Saffron: numbers, changes
+green = "#B5D28E"                 # Green Olive L 0.825: strings, additions
+cyan = "#9ECBA6"                  # Military Green L 0.80: parameters, members
+blue = "#E8B04A"                  # Honey: functions
+magenta = "#E4887A"               # Rust L 0.72
+purple = "#F8CEB3"                # Black of Jay L 0.88
+brown = "#885E41"                 # Black of Jay: rarely used ANSI 8th hue
+
+bright_red = "#FF9C91"            # Red Ruby L 0.80
+bright_yellow = "#F2D081"         # Saffron L 0.87: constants
+bright_green = "#CDE5AF"          # Green Olive L 0.89
+bright_cyan = "#C5E9CB"           # Military Green L 0.90
+bright_blue = "#FCE4BF"           # Honey L 0.93: operators
+bright_magenta = "#FEF2D9"        # Wheat L 0.965: keywords, white-hot
+bright_purple = "#FFE1CC"         # Black of Jay L 0.93

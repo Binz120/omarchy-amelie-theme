@@ -1,0 +1,51 @@
+/* Amélie — Walker launcher. Point ~/.config/walker/config.toml at this file. */
+:root {
+  --bg: #212E20;
+  --bg-deep: #182417;
+  --fg: #F5E1B8;
+  --fg-dim: #839D5C;
+  --accent: #E8B04A;
+  --sel: #2E5B34;
+}
+
+window {
+  background: transparent;
+}
+
+.box-wrapper {
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.search input {
+  background: var(--bg-deep);
+  color: var(--fg);
+  border: 1px solid var(--fg-dim);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.search input:focus {
+  border-color: var(--accent);
+}
+
+.item {
+  color: var(--fg);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.item:selected {
+  background: var(--sel);
+  color: #FFF9EA;
+}
+
+.item .description {
+  color: var(--fg-dim);
+}
+
+.item:selected .description {
+  color: #F5E1B8;
+}

@@ -1,0 +1,420 @@
+/* Amélie — GTK sheet.
+   The field is onyx green, the ink is wheat, the chrome is brass and the only
+   hot colour is the awning red. Titles and menus are set in Lora; body text
+   stays in the user's sans so dense apps remain readable. */
+
+@define-color background     #2B3A2A;
+@define-color background_dim #212E20;
+@define-color background_deep #182417;
+@define-color foreground     #F5E1B8;
+@define-color foreground_dim #839D5C;
+@define-color black          #1C2A1E;
+@define-color red            #F67D72;
+@define-color green          #B5D28E;
+@define-color yellow         #E8C87E;
+@define-color blue           #E8B04A;
+@define-color magenta        #E4887A;
+@define-color cyan           #9ECBA6;
+@define-color white          #FFF9EA;
+@define-color bright_red     #FF9C91;
+@define-color bright_yellow  #F2D081;
+@define-color bright_green   #CDE5AF;
+@define-color bright_cyan    #C5E9CB;
+@define-color bright_blue    #FCE4BF;
+@define-color accent         #E8B04A;
+
+@define-color accent_bg_color  @accent;
+@define-color accent_fg_color  @background_deep;
+@define-color accent_color     @accent;
+
+@define-color window_bg_color  @background;
+@define-color window_fg_color  @foreground;
+
+@define-color view_bg_color    @black;
+@define-color view_fg_color    @foreground;
+
+@define-color headerbar_bg_color       @background_dim;
+@define-color headerbar_fg_color       @foreground;
+@define-color headerbar_backdrop_color @background_deep;
+@define-color headerbar_shade_color    alpha(@background_deep, 0.85);
+@define-color headerbar_border_color   alpha(@accent, 0.35);
+
+@define-color card_bg_color   @background_dim;
+@define-color card_fg_color   @foreground;
+@define-color card_shade_color alpha(@background_deep, 0.9);
+
+@define-color dialog_bg_color @background_dim;
+@define-color dialog_fg_color @foreground;
+
+@define-color popover_bg_color @background_dim;
+@define-color popover_fg_color @foreground;
+
+@define-color sidebar_bg_color     @background_dim;
+@define-color sidebar_fg_color     @foreground;
+@define-color sidebar_backdrop_color @background_deep;
+@define-color sidebar_shade_color  @background_deep;
+
+@define-color destructive_bg_color @red;
+@define-color destructive_fg_color @background_deep;
+@define-color destructive_color    @red;
+@define-color success_bg_color     @green;
+@define-color success_fg_color     @background_deep;
+@define-color success_color        @green;
+@define-color warning_bg_color     @accent;
+@define-color warning_fg_color     @background_deep;
+@define-color warning_color        @accent;
+@define-color error_bg_color       @red;
+@define-color error_fg_color       @background_deep;
+@define-color error_color          @red;
+
+@define-color borders            alpha(@foreground, 0.16);
+@define-color unfocused_borders  alpha(@foreground, 0.08);
+@define-color insensitive_bg_color @background_dim;
+@define-color insensitive_fg_color @foreground_dim;
+
+/* Typography ------------------------------------------------------------- */
+
+headerbar,
+headerbar .title,
+.title,
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+window.dialog .title,
+popover,
+menu,
+menubar {
+  font-family: "Lora", "Nimbus Roman", serif;
+}
+
+headerbar .title,
+.title-1,
+.title-2 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Chrome ----------------------------------------------------------------- */
+
+headerbar {
+  background-image: none;
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  border-bottom: 1px solid alpha(@accent, 0.30);
+  box-shadow: none;
+  min-height: 36px;
+}
+
+headerbar:backdrop {
+  background-color: @headerbar_backdrop_color;
+  color: @foreground_dim;
+}
+
+headerbar entry,
+headerbar spinbutton,
+headerbar button {
+  min-height: 26px;
+}
+
+/* Buttons */
+
+button {
+  background-image: none;
+  background-color: alpha(@foreground, 0.06);
+  color: @foreground;
+  border: 1px solid alpha(@foreground, 0.18);
+  border-radius: 6px;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 5px 12px;
+}
+
+button:hover {
+  background-color: alpha(@foreground, 0.10);
+  border-color: alpha(@accent, 0.45);
+}
+
+button:active,
+button:checked {
+  background-color: alpha(@accent, 0.22);
+  border-color: @accent;
+  color: @white;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 1px solid @accent;
+  outline-offset: -1px;
+}
+
+button:disabled {
+  background-color: transparent;
+  border-color: alpha(@foreground, 0.08);
+  color: @insensitive_fg_color;
+}
+
+button.flat {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+button.flat:hover {
+  background-color: alpha(@foreground, 0.08);
+}
+
+button.suggested-action {
+  background-color: @accent;
+  border-color: @accent;
+  color: @background_deep;
+  font-weight: 600;
+}
+
+button.suggested-action:hover {
+  background-color: @yellow;
+  border-color: @yellow;
+}
+
+button.destructive-action {
+  background-color: @red;
+  border-color: @red;
+  color: @background_deep;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+entry,
+spinbutton,
+searchentry {
+  background-color: @black;
+  color: @foreground;
+  border: 1px solid alpha(@foreground, 0.18);
+  border-radius: 6px;
+  box-shadow: none;
+  caret-color: @accent;
+}
+
+entry:focus,
+entry:focus-within,
+spinbutton:focus-within {
+  border-color: @accent;
+  box-shadow: inset 0 0 0 1px alpha(@accent, 0.55);
+}
+
+entry placeholder,
+label.dim-label,
+.subtitle,
+.dim-label {
+  color: @foreground_dim;
+}
+
+selection,
+entry selection,
+textview selection,
+label selection {
+  background-color: @green;
+  color: @background_deep;
+}
+
+link,
+*:link {
+  color: @accent;
+}
+
+link:hover,
+*:link:hover {
+  color: @yellow;
+}
+
+/* Surfaces */
+
+popover,
+popover.background,
+menu,
+.menu {
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+  border: 1px solid alpha(@accent, 0.35);
+  border-radius: 8px;
+}
+
+popover > contents,
+popover.background > contents {
+  background-color: @popover_bg_color;
+  border-radius: 8px;
+}
+
+menuitem {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+menuitem:hover,
+modelbutton:hover {
+  background-color: alpha(@accent, 0.18);
+  color: @white;
+}
+
+tooltip,
+tooltip.background {
+  background-color: @background_deep;
+  color: @foreground;
+  border: 1px solid alpha(@accent, 0.40);
+  border-radius: 6px;
+}
+
+.card,
+.frame,
+view.frame {
+  background-color: @card_bg_color;
+  border: 1px solid alpha(@foreground, 0.10);
+  border-radius: 8px;
+}
+
+/* Controls */
+
+switch {
+  background-color: alpha(@foreground, 0.12);
+  border: 1px solid alpha(@foreground, 0.16);
+  border-radius: 999px;
+}
+
+switch:checked {
+  background-color: @accent;
+  border-color: @accent;
+}
+
+switch > slider {
+  background-color: @foreground;
+  border: none;
+  box-shadow: none;
+}
+
+switch:checked > slider {
+  background-color: @background_deep;
+}
+
+check,
+radio {
+  background-color: @black;
+  border: 1px solid alpha(@foreground, 0.30);
+  color: @background_deep;
+}
+
+check:checked,
+radio:checked {
+  background-color: @accent;
+  border-color: @accent;
+}
+
+scale trough {
+  background-color: alpha(@foreground, 0.12);
+  border-radius: 999px;
+  min-height: 4px;
+}
+
+scale highlight {
+  background-color: @accent;
+  border-radius: 999px;
+}
+
+scale slider {
+  background-color: @foreground;
+  border: 1px solid alpha(@background_deep, 0.6);
+  border-radius: 999px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+progressbar trough {
+  background-color: alpha(@foreground, 0.10);
+  border-radius: 999px;
+  min-height: 6px;
+}
+
+progressbar progress {
+  background-color: @accent;
+  border-radius: 999px;
+}
+
+levelbar block.filled {
+  background-color: @accent;
+  border-radius: 3px;
+}
+
+levelbar block.high {
+  background-color: @yellow;
+}
+
+levelbar block.low {
+  background-color: @green;
+}
+
+scrollbar slider {
+  background-color: alpha(@foreground, 0.28);
+  border-radius: 999px;
+  min-width: 6px;
+  min-height: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: alpha(@accent, 0.70);
+}
+
+/* Sidebars and lists */
+
+.sidebar,
+.navigation-sidebar,
+list.sidebar {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+}
+
+.navigation-sidebar > row,
+list.sidebar row {
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.navigation-sidebar > row:hover,
+list.sidebar row:hover {
+  background-color: alpha(@foreground, 0.06);
+}
+
+.navigation-sidebar > row:selected,
+list.sidebar row:selected {
+  background-color: alpha(@accent, 0.16);
+  box-shadow: inset 2px 0 0 @accent;
+  color: @white;
+}
+
+row:selected,
+gridview > child:selected {
+  background-color: alpha(@accent, 0.16);
+  color: @white;
+}
+
+/* Notebooks and separators */
+
+notebook > header tab {
+  color: @foreground_dim;
+  padding: 6px 12px;
+}
+
+notebook > header tab:checked {
+  color: @foreground;
+  box-shadow: inset 0 -2px 0 @accent;
+}
+
+separator {
+  background-color: alpha(@foreground, 0.12);
+  min-width: 1px;
+  min-height: 1px;
+}
+
+/* Workspace quirks */
+
+windowcontrols button {
+  border-radius: 6px;
+}

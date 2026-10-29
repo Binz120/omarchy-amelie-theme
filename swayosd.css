@@ -1,0 +1,40 @@
+/* Amélie — SwayOSD. Launch with: swayosd-server --style <this file> */
+@define-color bg #212E20;
+@define-color bg-deep #182417;
+@define-color fg #F5E1B8;
+@define-color fg-dim #839D5C;
+@define-color accent #E8B04A;
+@define-color line #839D5C;
+
+window#osd {
+  background-color: @bg;
+  border: 1px solid alpha(@accent, 0.45);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+window#osd #container {
+  color: @fg;
+}
+
+window#osd image,
+window#osd label {
+  color: @fg;
+}
+
+window#osd progressbar trough {
+  background-color: @bg-deep;
+  border-radius: 999px;
+  min-height: 6px;
+}
+
+window#osd progressbar progress {
+  background-color: @accent;
+  border-radius: 999px;
+}
+
+window#osd button {
+  background: transparent;
+  border: none;
+  color: @fg-dim;
+}

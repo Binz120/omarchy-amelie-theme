@@ -1,0 +1,114 @@
+/**
+* @name Amélie
+* @description Amélie palette for Vencord / Vesktop
+* @version 1.0.0
+*/
+
+/* Legacy variables. Current Discord does not paint from these any more, but
+   plugins and older Vesktop versions still read some of them. */
+:root {
+  --background-primary: #2B3A2A;
+  --background-secondary: #212E20;
+  --background-secondary-alt: #182417;
+  --background-tertiary: #182417;
+  --background-modifier-hover: #2E5B34;
+  --background-modifier-selected: #2E5B34;
+  --text-normal: #F5E1B8;
+  --text-muted: #D8D0A1;
+  --text-link: #E8B04A;
+  --header-primary: #FFF9EA;
+  --header-secondary: #839D5C;
+  --interactive-normal: #F5E1B8;
+  --interactive-hover: #FFF9EA;
+  --interactive-active: #E8B04A;
+  --brand-500: #E8B04A;
+  --brand-experiment: #E8B04A;
+  --status-positive: #B5D28E;
+  --status-warning: #E8C87E;
+  --status-danger: #F67D72;
+  --scrollbar-thin-thumb: #76914C;
+  --scrollbar-auto-track: #182417;
+}
+
+/* The variables the current UI actually paints with. Declared on the theme
+   classes as well as :root: Discord sets its own values on .theme-dark /
+   .theme-darker elements, and an inherited :root value loses to any
+   declaration that matches the element itself. */
+:root, .theme-dark, .theme-darker, .theme-light {
+  --background-base-lowest: #182417;
+  --background-base-lower: #212E20;
+  --background-base-low: #2B3A2A;
+  --background-surface-high: #434E3B;
+  --background-surface-higher: #4B5541;
+  --background-surface-highest: #535B46;
+  --bg-surface-raised: #434E3B;
+  --modal-background: #212E20;
+  --modal-footer-background: #182417;
+  --card-background-default: #212E20;
+  --card-secondary-bg: #434E3B;
+  --card-primary-pressed-bg: #182417;
+  --channeltextarea-background: #212E20;
+  --chat-background: #2B3A2A;
+  --chat-background-default: #2B3A2A;
+  --background-floating: #212E20;
+  --background-accent: #2E5B34;
+  --background-code: #182417;
+  --scrollbar-thin-thumb: #76914C;
+  --scrollbar-thin-track: #182417;
+  --scrollbar-auto-thumb: #76914C;
+  --scrollbar-auto-track: #182417;
+
+  --text-default: #F5E1B8;
+  --text-strong: #FFF9EA;
+  --text-muted: #D8D0A1;
+  --chat-text-muted: #D8D0A1;
+  --text-subtle: #76914C;
+  --text-link: #E8B04A;
+  --text-brand: #E8B04A;
+  --text-invert: #182417;
+
+  --interactive-icon-default: #F5E1B8;
+  --interactive-icon-hover: #FFF9EA;
+  --interactive-icon-active: #E8B04A;
+  --interactive-text-default: #F5E1B8;
+  --interactive-text-hover: #FFF9EA;
+  --interactive-text-active: #E8B04A;
+  --interactive-background-hover: #2E5B34;
+  --interactive-background-active: #2E5B34;
+  --interactive-background-selected: #2E5B34;
+  --interactive-accent-background-default: #2E5B34;
+  --interactive-accent-background-hover: #2E5B34;
+  --interactive-accent-background-active: #2E5B34;
+  --interactive-accent-background-selected: #2E5B34;
+
+  --control-primary-background-default: #E8B04A;
+  --control-primary-background-hover: #ECBE6B;
+  --control-primary-background-active: #BE903D;
+  --control-primary-border-default: #E8B04A;
+  --control-primary-border-hover: #ECBE6B;
+  --control-primary-border-active: #BE903D;
+  --control-primary-text-default: #000000;
+  --control-primary-text-hover: #000000;
+  --control-primary-text-active: #000000;
+  --control-primary-icon-default: #000000;
+  --control-primary-icon-hover: #000000;
+  --control-primary-icon-active: #000000;
+  --background-brand: #E8B04A;
+  --icon-brand: #E8B04A;
+
+  --status-online: #B5D28E;
+  --icon-status-online: #B5D28E;
+  --icon-status-idle: #E8C87E;
+  --icon-status-dnd: #F67D72;
+  --icon-status-offline: #76914C;
+  --text-status-online: #B5D28E;
+  --text-status-idle: #E8C87E;
+  --text-status-dnd: #F67D72;
+  --text-status-offline: #76914C;
+
+  --border-subtle: color-mix(in oklab, #2B3A2A 88%, #F5E1B8 12%);
+  --border-muted: #212E20;
+  --border-normal: color-mix(in oklab, #2B3A2A 70%, #F5E1B8 30%);
+  --border-strong: color-mix(in oklab, #2B3A2A 55%, #F5E1B8 45%);
+  --border-focus: #E8B04A;
+}
