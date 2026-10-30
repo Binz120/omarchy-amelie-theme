@@ -2,9 +2,14 @@
 
 ![Amélie — terminal specimen over the theme wallpaper](preview.png)
 
-A theme built from the Amélie palette: onyx green field, wheat light, brass
-chrome, and the red of the café awning. The red is kept for the one thing that
-should be noticed: errors, attention marks and the active window border.
+A theme built from the Amélie palette. Jeunet and Delbonnel lit Montmartre in
+green and gold and held red back for the few objects that carry the story; the
+palette works the same way here. Onyx green field, wheat light, brass chrome, and
+the café awning's red kept for the one thing that should be noticed: errors,
+attention marks and the active window border.
+
+The film's pleasure is in small tactile things, and the theme is built out of
+them: brass, enamel, lamplight, and a green that is always a room.
 
 ## Install
 
