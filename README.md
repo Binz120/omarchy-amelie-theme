@@ -11,6 +11,20 @@ attention marks and the active window border.
 The film's pleasure is in small tactile things, and the theme is built out of
 them: brass, enamel, lamplight, and a green that is always a room.
 
+## Screenshots
+
+![btop, lazygit, Neovim and flea tiled on one workspace](screenshots/tiled.png)
+
+Four windows on one workspace: btop, lazygit, Neovim reading `colors.toml`, and
+flea on the theme directory. Every colour in the frame comes from the palette,
+including the gap colour, the inactive border and the bar.
+
+![flea floating over the same workspace](screenshots/floating.png)
+
+flea floating over the same windows, resized by hand. The rounding, the shadow
+and the headerbar are `gtk.css`; the transport buttons and file icons keep away
+from red.
+
 ## Install
 
 ```bash
@@ -105,7 +119,8 @@ repo (which loses `*.lua`) still gets a border, just a single-stop one.
 | `base24.yaml` | The palette in Base24 form, for any tool that consumes that spec. |
 | `chromium.theme` | `43,58,42`. |
 | `backgrounds/` | One wallpaper, generated procedurally from the palette (Pillow + numpy, 2560x1440). |
-| `preview.png` | 1920x1080 capture on a virtual output. |
+| `preview.png` | 1920x1080 capture of the applied theme: one terminal over the wallpaper. |
+| `screenshots/` | 1920x1080 captures with apps open: tiled and floating. |
 
 ## Apps outside Omarchy's own theming
 
