@@ -1,6 +1,6 @@
 # Amélie
 
-![Amélie — terminal specimen over the theme wallpaper](preview.png)
+![Amélie: terminal specimen over the theme wallpaper](preview.png)
 
 A theme built from the Amélie palette. Jeunet and Delbonnel lit Montmartre in
 green and gold and held red back for the few objects that carry the story; the
@@ -32,8 +32,8 @@ omarchy theme install https://github.com/Binz120/omarchy-amelie-theme
 omarchy theme set amelie
 ```
 
-A clone installs as `amelie` — the accented slug is a local name, since a
-repository name cannot carry it — and Omarchy drops a cloned theme's
+A clone installs as `amelie`. The accented slug is a local name, since a
+repository name cannot carry it. Omarchy drops a cloned theme's
 `hyprland.lua` and the terminal configs at staging, because those run code.
 `colors.toml` carries the same border gradient as a string, so the look
 survives; the files a local copy adds are a gradient on grouped windows and
@@ -53,19 +53,19 @@ Backgrounds: `Super + Ctrl + Space` or `omarchy theme bg next`.
 ## Palette
 
 Twelve of the anchors arrived as a list and are used directly; the rest are OKLCH
-variants of those anchors — same hue, different lightness and chroma — because a
+variants of those anchors, same hue with different lightness and chroma, because a
 dark theme cannot print `#A4161A` as text (1.56:1) and stay readable.
 
 | Role | Colour | Anchor | Contrast on the field |
 |---|---|---|---|
-| Field (background) | `#2B3A2A` | Onyx | — |
-| Panels (dark background) | `#212E20` | Onyx L 0.285 | — |
-| Deepest chrome | `#182417` | Onyx L 0.245 | — |
+| Field (background) | `#2B3A2A` | Onyx | n/a |
+| Panels (dark background) | `#212E20` | Onyx L 0.285 | n/a |
+| Deepest chrome | `#182417` | Onyx L 0.245 | n/a |
 | Body text (foreground) | `#F5E1B8` | Wheat Light | 9.39 |
 | Cursor (bright foreground) | `#FFF9EA` | Wheat Light L 0.985 | 11.48 |
 | Dim text (dark foreground) | `#76914C` | Green Olive L 0.62 | 3.40 |
 | Comments (muted) | `#839D5C` | Green Olive L 0.66 | 3.99 |
-| Accent — focus, links, functions | `#E8B04A` | Honey | 6.17 |
+| Accent: focus, links, functions | `#E8B04A` | Honey | 6.17 |
 | Selection | `#2E5B34` | Military Green | 6.14 with wheat on it |
 | Keywords | `#FEF2D9` | Wheat L 0.965 | 10.86 |
 | Types | `#E8C87E` | Caramel L 0.845 | 7.46 |
@@ -82,7 +82,7 @@ surfaces and as the border gradient stop, not as type. Comments are the one
 deliberately low-contrast role (3.99, chrome only); everything else clears 4.5.
 
 Two notes on the source list. `#C1C13` (red blood), `#F7A3A` (green forest) and
-`#CC86E` (green pistachio) are five digits — not valid hex — so those three roles
+`#CC86E` (green pistachio) are five digits, so not valid hex, so those three roles
 were derived instead: blood as a lifted ruby, pistachio as a lifted olive, forest
 as the military-green hue carried into the sage family. Send the full six digits
 and they replace the derivations exactly.
@@ -115,7 +115,7 @@ repo (which loses `*.lua`) still gets a border, just a single-stop one.
 | `mako.ini` | Notification daemon: onyx box, honey border, critical notifications in ruby. Include it from `~/.config/mako/config`. |
 | `swayosd.css` | OSD styling: `swayosd-server --style ~/.local/state/omarchy/current/theme/swayosd.css`. |
 | `walker.css` | Launcher: point `~/.config/walker/config.toml` at this file. |
-| `zed.json`, `warp.yaml`, `vencord.theme.css` | Editor, terminal and Discord themes — each app imports its file by hand (see below). |
+| `zed.json`, `warp.yaml`, `vencord.theme.css` | Editor, terminal and Discord themes; each app imports its file by hand (see below). |
 | `base24.yaml` | The palette in Base24 form, for any tool that consumes that spec. |
 | `chromium.theme` | `43,58,42`. |
 | `backgrounds/` | One wallpaper, generated procedurally from the palette (Pillow + numpy, 2560x1440). |
@@ -139,23 +139,23 @@ Wired automatically on every `omarchy theme set` by `40-app-configs`:
 Imported by hand, because the app owns the file:
 
 ```bash
-# mako — add to ~/.config/mako/config
+# mako: add to ~/.config/mako/config
 include=~/.local/state/omarchy/current/theme/mako.ini
 
 # swayosd
 swayosd-server --style ~/.local/state/omarchy/current/theme/swayosd.css
 
-# walker — ~/.config/walker/config.toml
+# walker: ~/.config/walker/config.toml
 [ui]
 theme = "~/.local/state/omarchy/current/theme/walker.css"
 
-# Zed — copy into ~/.config/zed/themes/ and pick "Amélie"
+# Zed: copy into ~/.config/zed/themes/ and pick "Amélie"
 cp ~/.local/state/omarchy/current/theme/zed.json ~/.config/zed/themes/
 
-# Warp — copy into ~/.warp/themes/
+# Warp: copy into ~/.warp/themes/
 mkdir -p ~/.warp/themes && cp ~/.local/state/omarchy/current/theme/warp.yaml ~/.warp/themes/
 
-# Vencord / Vesktop — copy into the themes folder and enable it in settings
+# Vencord / Vesktop: copy into the themes folder and enable it in settings
 cp ~/.local/state/omarchy/current/theme/vencord.theme.css ~/.config/Vencord/themes/
 ```
 
@@ -183,7 +183,7 @@ on a fresh theme change. This machine has a hook for it:
 It writes `userChrome.css` and `userContent.css` into every Waterfox profile that
 has a `prefs.js`, and appends the four prefs that let chrome stylesheets load:
 `toolkit.legacyUserProfileCustomizations.stylesheets`, both `browser.theme.*`
-prefs, and `ui.systemUsesDarkTheme`. Waterfox reads the CSS at startup — quit and
+prefs, and `ui.systemUsesDarkTheme`. Waterfox reads the CSS at startup. Quit and
 reopen it after a theme change.
 
 ## Verified

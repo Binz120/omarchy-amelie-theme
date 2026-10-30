@@ -5,7 +5,7 @@
 # of them carry the theme directly (onyx, wheat, wheat light, military green,
 # olive, caramel, honey, saffron, ruby, vermillon, rust, black of jay) and the
 # rest are variants of those anchors in OKLCH: same hue, different lightness and
-# chroma. Reds never carry text below the error role — they are surfaces,
+# chroma. Reds never carry text below the error role: they are surfaces,
 # attention marks and the window border.
 #
 # Anchor map:

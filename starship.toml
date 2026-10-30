@@ -1,4 +1,4 @@
-# Amélie — prompt. Rendered from colors.toml by scripts/render-app-themes.py.
+# Amélie: prompt. Rendered from colors.toml by scripts/render-app-themes.py.
 
 format = """\
 [┌─](#839D5C)\
